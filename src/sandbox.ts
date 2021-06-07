@@ -1,19 +1,8 @@
-let greet : Function;
+type StringOrNumber = number | string;
+type ObjWithName = { name : string , uid : StringOrNumber}
 
-greet = () => {
-    console.log("Merhaba");
+const logDetails = ( user: ObjWithName, item : string ) => {
+    console.log("Item is " + item + ". UID is " + user);
 }
 
-const add = (a: number, b: number, c: number | string = 10): void => {
-    console.log(a + b);
-    console.log(c);
-  }
-  
-  add(5, 10, 'ninja');
-  
-  const minus = (a: number, b: number): number => {
-    return a + b;
-  }
-  
-  let result = minus(10,7);
-  console.log(result);
+logDetails({name:"ahmet", uid: 5}, "sabun");

@@ -1,16 +1,5 @@
 "use strict";
-var greet;
-greet = function () {
-    console.log("Merhaba");
+var logDetails = function (user, item) {
+    console.log("Item is " + item + ". UID is " + user);
 };
-var add = function (a, b, c) {
-    if (c === void 0) { c = 10; }
-    console.log(a + b);
-    console.log(c);
-};
-add(5, 10, 'ninja');
-var minus = function (a, b) {
-    return a + b;
-};
-var result = minus(10, 7);
-console.log(result);
+logDetails({ name: "ahmet", uid: 5 }, "sabun");
